@@ -1,0 +1,66 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#jeux {
+width: 600px;
+height: 600px;
+
+border: 2px solid black;
+display: flex;
+ flex-wrap: wrap;
+
+}
+
+#jeux > div {
+  width: 33%;
+  height: 33%;
+  
+  border: solid black 1px;
+
+}
+
+.player1 {
+  background-color: green;
+}
+
+.player2 {
+background-color: red;  
+}
+button {
+
+}
+
+#x1y1{
+
+}
+#x1y2{
+
+}
+
+#x1y3 {
+
+}
+
+#x2y1 {
+
+}
+
+#x2y2 {
+
+}
+
+#x2y3 {
+
+}
+
+#x3y1 {
+
+}
+#x3y2{
+
+}
+#x3y3{
+
+}

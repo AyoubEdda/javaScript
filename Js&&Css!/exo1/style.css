@@ -1,0 +1,9 @@
+.selected {
+  background-color: #88f;
+}
+.hide {
+  display: none;
+}
+.restore {
+  display: block;
+}

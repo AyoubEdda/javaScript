@@ -1,0 +1,538 @@
+console.log(true && true); //  true
+console.log(true && false); //  false
+console.log(false && true); // false
+console.log(false && false); //  false
+
+
+______________________________________________________________________________________
+
+var meteo = prompt("Quel temps fait-il dehors ?");
+switch (meteo) {
+case "soleil":
+    console.log("Sortez en t-shirt.");
+    break;
+case "vent":
+    console.log("Sortez en pull.");
+    break;
+case "pluie":
+    console.log("Sortez en blouson.");
+    break;
+case "neige":
+    console.log("Restez au chaud à la maison.");
+    break;
+default:
+    console.log("Je n'ai pas compris !");
+}
+
+---------------------------------------------------------------------------------------------
+
+var diviseParTrois = function(nombre) {
+    var val = nombre / 3;
+    console.log(val);
+};
+diviseParTrois(8);
+
+
+______________________________________________________________________________________________
+var foisDeux = function(nombre) {
+    return nombre * 2;
+};
+
+// Appelez foisDeux ici !
+var nouveauNombre = foisDeux(6)
+console.log(nouveauNombre
+
+
+
+
+
+
+____________________________________________________________________________________________
+==
+	
+
+égal à
+
+!=
+	
+
+différent de
+
+===
+	
+
+contenu et type égal à
+
+!==
+	
+
+contenu ou type différent de
+
+>
+	
+
+supérieur à
+
+>=
+	
+
+supérieur ou égal à
+
+<
+	
+
+inférieur à
+
+<=
+
+
+inférieur ou égal à
+
+===================================================================================================
+&&
+	
+
+ET
+	
+
+valeur1 && valeur2
+
+||
+	
+
+OU
+	
+
+valeur1 || valeur2
+
+!
+	
+
+NON
+	
+
+!valeur
+
+===============================================================================================
+var drawer = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4) :'));
+
+switch (drawer) {
+    case 1:
+        alert('Contient divers outils pour dessiner : du papier, des crayons, etc.');
+    break;
+
+    case 2:
+        alert('Contient du matériel informatique : des câbles, des composants, etc.');
+    break;
+
+    case 3:
+        alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+    break;
+
+    case 4:
+        alert('Contient des vêtements : des chemises, des pantalons, etc.');
+    break;
+
+    default:
+        alert("Info du jour : le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+}
+
+
+
+--------------------------------------------------------------------------------------------------
+
+var startMessage = 'Votre catégorie : ',
+
+    endMessage,
+
+    adult = confirm('Êtes-vous majeur ?');
+
+
+endMessage = adult ? '18+' : '-18'; 
+// si la valeur "adult" est vrai alors cela affichera la valeur juste apres le point d 'interogation  sinon si elle est fausse elle afichera la valeur apres les 2 petit point
+
+
+alert(startMessage + endMessage);
+
+==============================================================================================
+BOUCLE DO WHILE
+
+do {
+
+    instruction_1;
+
+    instruction_2;
+
+    instruction_3;
+
+} while (condition);
+
+==============================================
+
+boucle for: 
+
+for (var iter = 0; iter < 5; iter++) {
+
+    alert('Itération n°' + iter);
+
+}
+
+en gros 
+
+for (initialisation; condition; incrémentation) {
+
+    instruction_1;
+
+    instruction_2;
+
+    instruction_3;
+
+}
+=================================================================================================
+Lorsqu'une variable n'est accessible que dans une partie de votre code, on dit qu'elle se trouve au sein d'un « scope ». Retenez bien ce terme, il vous servira à l'ave
+
+========================================================================================
+A retenir ! toujours mettre la variable facultatif en derniere ! 
+
+Un return met fin a la fonction , donc elle ne prendra pas en compte ce qui est dit apres le return ! 
+---------------------------------------------------------------------------------------------------
+les fonction anonyme : IIFE : 
+
+
+
+
+var test = 'noir'; // On crée une variable « test » contenant le mot « noir »
+
+(function() { // Début de la zone isolée
+
+    var test = 'blanc'; // On crée une variable du même nom avec le contenu « blanc » dans la zone isolée
+  
+    alert('Dans la zone isolée, la couleur est : ' + test);
+
+})(); // Fin de la zone isolée. Les variables créées dans cette zone sont détruites.
+
+alert('Dans la zone non-isolée, la couleur est : ' + test); // Le texte final contient bien le mot « noir » vu que la « zone isolée » n'a aucune influence sur le reste du code
+
+__________________________________________________________________________________________________
+a retenir: Il faut éviter le plus possible d'avoir recours aux variables globales.
+
+Une fonction peut recevoir un nombre défini ou indéfini de paramètres. Elle peut aussi retourner une valeur ou ne rien retourner du tout.
+
+Des fonctions qui ne portent pas de nom sont des fonctions anonymes et servent à isoler une partie du code.
+___________________________________________________________________________________________________
+
+var myString = 'Ceci est une chaîne de caractères'; // On crée un objet String
+
+
+alert(myString.length); // On affiche le nombre de caractères, au moyen de la propriété « length »
+
+
+alert(myString.toUpperCase()); // On récupère la chaîne en majuscules, avec la méthode toUpperCase()
+
+==================================================================================================
+Objets natifs déjà rencontrés:
+
+    Number : l'objet qui gère les nombres ;
+
+    Boolean : l'objet qui gère les booléens ;
+
+    String : l'objet qui gère les chaînes de caractères.
+
+___________________________________________________________________________________________________
+
+les tableau: 
+
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+
+myArray[1] = 'Clarisse'; // permet de modifier une valeur du tableau 
+
+alert(myArray[1]);
+
+================================================================================================
+permet d ajouter des valeur a la fin d'un tableau : 
+
+var myArray = ['Sébastien', 'Laurence'];
+
+myArray.push('Ludovic'); // Ajoute « Ludovic » à la fin du tableau
+myArray.push('Pauline', 'Guillaume'); // Ajoute « Pauline » et « Guillaume » à la fin du tableau
+
+permet d ajouter des valeur au debut d'un tableau :
+unshift()
+
+===================================================================================================
+
+Les méthodes shift() et pop() retirent respectivement le premier et le dernier élément du tableau
+
+
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+
+myArray.shift(); // Retire « Sébastien »
+myArray.pop(); // Retire « Guillaume »
+
+alert(myArray); // Affiche « Laurence,Ludovic,Pauline »
+
+
+--------------------------------------------------------------------------------------------------
+
+La méthode split() va couper la chaîne de caractères à chaque fois qu'elle va rencontrer une espace. Les portions ainsi découpées sont placées dans un tableau, ici cousinsArray.
+
+var cousinsString = 'Pauline Guillaume Clarisse',
+    cousinsArray = cousinsString.split(' ');
+
+alert(cousinsString);
+alert(cousinsArray); 
+
+============================================================================
+L'inverse de split(), c'est-à-dire créer une chaîne de caractères depuis un tableau, se nomme join()
+
+
+var cousinsString_2 = cousinsArray.join('-');
+
+alert(cousinsString_2);
+___________________________________________________________________________
+
+parcourir un tableau avec la boucle for : 
+(la variable sert a gagné du temps et a éviter qua chaque boucle le .length soit recalculer)
+
+
+for (var i = 0, c = myArray.length; i < c; i++) {
+
+    
+
+    alert(myArray[i]); 
+
+}
+
+---------------------------------------------------------------------------------------------------
+Cette déclaration va créer un objet analogue à un tableau, excepté le fait que chaque item sera accessible au moyen d'un identifiant
+
+
+var myObject = {
+
+    item1: 'Texte 1',
+
+    item2: 'Texte 2'
+
+};
+
+myObject.item1; // fait apel a l'item 1 du tableau; item et en realiter une proprieté comme length 
+
+=================================================================================================
+var family = {
+
+    self: 'Sébastien',
+
+    sister: 'Laurence',
+
+    brother: 'Ludovic',
+
+    cousin_1: 'Pauline',
+
+    cousin_2: 'Guillaume'
+
+};
+alert(family.sister); // affiche 'Laurence'
+
+--------------------------------------------------------------------------------------------
+for (var id in family) { // On stocke l'identifiant dans « id » pour parcourir l'objet « family »
+
+    
+
+    alert(family[id]);
+
+        
+
+} // a ne pas utiliser sur les tableaux avec index; index = []
+
+____________________________________________________________________________________________
+
+utilisation d'un tableaux : 
+
+
+var nicks = [], // Création du tableau vide
+    nick;
+
+while (nick = prompt('Entrez un prénom :')) { // Si la valeur assignée à la variable « nick » est valide (différente de « null ») alors la boucle s'exécute
+    nicks.push(nick); // Ajoute le nouveau prénom au tableau
+}
+
+if (nicks.length > 0) { // On regarde le nombre d'items
+    alert(nicks.join(' ')); // Affiche les prénoms à la suite
+} else {
+    alert('Il n\'y a aucun prénom en mémoire !');
+}
+
+============================================================================================
+
+On ne peut agir que sur les variale global a l aide de la console ! 
+
+
+
+_____________________________________________________________________________________
+
+$o = document.getElementById("o");
+$o.onclick = function (){
+	alert("Hello World! Lel");
+}
+
+
+====================================================
+$o = document.getElementById("o");
+$o.onclick = function () {
+   document.bgColor= "#FFFggF";
+}
+$aValider = document.getElementById("aValider");
+$aValider.onkeypress = function (e){
+	if(e.keyCode == 13 && $aValider.value == ""){
+  	alert("WTF");
+  }
+}
+
+===============================================================================
+
+$proposition = document.getElementById("proposition");
+$bouton = document.getElementById("bouton");
+$resultat = document.getElementById("resultat");
+reponse = Math.ceil(Math.random() * 1)
+occ = 0
+$occ = document.getElementById("occ");
+$occdisp = document.getElementById("occdisp");
+function verifier() {
+    if ($proposition.value < reponse) {
+        $resultat.innerHTML = "Insuffisant !";
+        occ++;
+    }
+    if ($proposition.value == reponse) {
+        $resultat.innerHTML = "Juste ce qu'il faut";
+        $occdisp.innerHTML = "<a href='google.fr'>Nombres d'essai!:</a> "; // et contenu dans la div occdisp
+        $occdisp.innerHTML += occ;
+    }
+    if ($proposition.value > reponse) {
+        $resultat.innerHTML = "Trop !";
+        occ++; // ajoute +1 a la valeur occ
+    }
+}
+
+$bouton.onclick = verifier;
+
+========================================================================================
+JEUX DES BATON: 
+$affichage = document.getElementById("affichage");
+$combien = document.getElementById("combien");
+$bouton = document.getElementById("bouton");
+
+// Nombre de bâtons actuellement sur le jeu
+nb = 25;
+
+// Affiche les 'nb' bâtons dans la <div id="affichage"></div>
+function afficher() {
+    batons = "";
+    for (i = 0; i < nb; i++) {
+        batons += "| ";
+    }
+    $affichage.innerHTML = batons;
+}
+
+// Affiche les bâtons de départ
+afficher();
+
+// Retire autant de bâtons que la valeur du champ texte
+function retirer() {
+    nb -= parseInt($combien.value);
+if (nb <= 1){
+alert("la partie est terminée");
+}
+    // Met à jour les bâtons affichés
+    afficher();
+}
+
+
+// On appelle la fonction de retrait quand on click sur le bouton
+$bouton.onclick = retirer;
+
+=================================================================================================
+les tableaux ! 
+
+var tableau = ["Bob", "Julien", "Roger"];
+$ul = document.getElementById("liste");
+//alert(tableau); // affiche « Bob,Julien,Roger »
+// Parcourir un tableau à la main
+//alert(tableau[0]); // affiche « Bob »
+//alert(tableau[1]); // affiche « Julien »
+//alert(tableau[2]); // affiche « Roger »
+// Parcourir un tableau automatiquement
+var i
+;
+for (i = 0; i < tableau.length; i++) {
+    $ul.innerHTML+="<li>"+tableau[i]+"</li>"; 
+    // inertHTMl : permet d incrementer au html la valeur choisie ! 
+}
+// Supprimer le dernier élément
+//alert(tableau.pop()); // affiche « Roger »
+//alert(tableau); // affiche « Bob, Julien »
+// Ajouter un élément à la fin
+tableau.push("Toto");
+//alert(tableau); // affiche « Bob, Julien, Toto »
+
+====================================================================================
+
+Les argument dans les fonctions sont utiliser seulement pour connaitre leur valeur et les utilisé sans les modifié  ;
+
+-----------------------------------------------------------------------------------
+
+Rapeler une fonction permet de la reutilisé donc qu elle s execute une nouvelle fois ! 
+
+
+==================================================================================================
+
+(en cours)
+
+$prenom = document.getElementById("prenom").value;
+$nom = document.getElementById("nom").value;
+$numeros = document.getElementById("numeros").value;
+$ajouter = document.getElementById("ajouter");
+$ul = document.getElementById("ul")
+
+contacts = [{
+  prenom: "Julien",
+nom: "Grillot",
+numero: "0123456789"
+}, {
+prenom: "John",
+nom: "Smith",
+numero: "0123456789"
+}];
+
+function texteContact() {
+$m = "";
+for (var id in  contacts) {
+    $m +="<li>"+contacts[id].prenom+ " "+contacts[id].nom
+    + " " +" "+contacts[id].numero +"</li>"; // on doit reprecicer l emplacement de chaque valeur : exemple  contacts[id].nom ; pour lui dire ou il doit la cherché !
+	}
+}
+function affichage() {
+$ul.innerHTML = $m;
+
+
+}
+
+$search.onclick = function recherche(){
+for (var = i; i < contacts.length ; i++ )
+{
+if (contacts[i] == $prenom){
+aler(lol);
+}
+}
+
+
+}
+/*$ajouter.onclick = function search() {
+console.log("heyy !!" );
+}*/
+recherche();
+texteContact();
+
+//Object.is() ; regarder sa sur internet si jamais fidl pas enregister !
+
+
+
