@@ -1,40 +1,55 @@
+$boutton = document.getElementById("boutton");
+$affichage = document.getElementById("affichage");
+$multiplicateur = document.getElementById("multiplicateur");
+$autoclick = document.getElementById("autoclick");
 
-$bouton = document.getElementById("bouton");
+var score = 0;
+var compteur = 1;
+var cout = 50;
+var future = 5;
+var auto = 1;
 
-$score = document.getElementById("score");
-
-score = 0;
-
-function afficherScore() {
-   $score.innerHTML = "Score : " + score;
+$boutton.onclick = function augmente () {
+  score = score + compteur;
+  console.log(score);
+  affichage();
 }
 
-$bouton.onclick = clic;
+function affichage () {
+  $affichage.innerHTML = "Score :" + score ;
+  $multiplicateur.innerHTML = "Bonus de : " + "x" +future + " " +  "prix :" + cout;
+  $autoclick.innerHTML = "Autoclick de : " + auto + "prix : " + cout;
+}
 
-afficherScore();
-function afficherNbMultiplicateur() {
-   $multiplicateur.innerHTML = "Multiplicateur x" + nbMultiplicateur + " (prix du prochain : " + prix() + ")";
+$multiplicateur.onclick = function incrementer() {
+  if (score >= cout){
+      compteur = compteur * 5;
+      score -= cout;
+      console.log(compteur);
+      cout = cout * 2;
+      future = future *5;
+  }
+  else{
+    alert("Tu na pas assez de point ! ")
+  }
+    affichage();
 }
-function clic() {
-   score = score + nbMultiplicateur;
-   afficherScore();
+
+$autoclick.onclick = function autoclick() {
+  if(score >= cout){
+    auto = auto * 2;
+    score -= cout;
+  }
+  else {
+      alert("Tu na pas assez de point ! ")
+  }
 }
-function prix() {
-   return 20 * nbMultiplicateur * nbMultiplicateur;
-}
-function acheterMultiplicateur() {
-   if (score >= prix()) {
-       score = score - prix();
-       nbMultiplicateur = nbMultiplicateur + 1;
-       afficherNbMultiplicateur();
-       afficherScore();
-   } else {
-       alert("Votre score est insuffisant !");
-   }
-}
-function autoclic() {
-   myVar = setInterval(clic, 1000);}
-   $bouton.onclick = clic;
-$multiplicateur.onclick = acheterMultiplicateur;
-afficherScore();
-afficherNbMultiplicateur();$auto.onclick= autoclic();
+
+
+setInterval(function(){
+   score = score + auto;
+   console.log(auto);
+   affichage();
+ }, 1000);
+
+affichage();
